@@ -2,7 +2,7 @@
 
 
 
-Bom pessoal, durante a aula [**Autenticação simples**]([DIO | Codifique o seu futuro global agora](https://web.dio.me/course/adicionando-seguranca-a-uma-api-rest-com-spring-security/learning/d3b4b5e7-f007-4a09-a5ce-a61923eef4f8?back=/track/coding-the-future-cognizant-arquitetura-com-spring-boot-e-cloud&tab=undefined&moduleId=undefined)) do módulo de segurança, vi que algumas coisas foram modificadas desde a gravação do curso para cá. Fiz algumas pesquisas sobre e resolvi compartilhar com vocês o que eu aprendi:
+Repositório dedicado a aprender Spring Security.
 
 
 
