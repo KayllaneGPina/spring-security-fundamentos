@@ -36,4 +36,20 @@ public class WebSecurtiyConfig {
         return new InMemoryUserDetailsManager(user, admin);
     }
 
+    @Bean
+    public SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception {
+        httpSecurity.authorizeHttpRequests(authorize -> authorize
+                        .requestMatchers("/").permitAll()
+                        .requestMatchers(HttpMethod.POST, "/login").permitAll()
+                        .requestMatchers("/managers").hasAnyRole("MANAGERS")
+                        .requestMatchers("/users").hasAnyRole("USERS", "MANAGERS")
+                        .anyRequest().authenticated()
+                )
+                .formLogin(withDefaults())
+                .httpBasic(withDefaults());
+
+        return httpSecurity.build();
+
+    }
+
 }
